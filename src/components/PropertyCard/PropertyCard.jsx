@@ -42,7 +42,7 @@ const PropertyCard = ({ property }) => {
         <div className="space-y-2">
           <img
             src={apartment_img}
-            alt=""
+            alt="Photos Coming Soon"
             className="block object-cover object-center w-full rounded-md h-60"
           />
           <div className="flex gap-2 items-center text-md">
@@ -58,7 +58,7 @@ const PropertyCard = ({ property }) => {
             </h3>
           </a>
           <p className="leading-snug dark:text-gray-600">
-            {description.substring(0, 50)}...
+            {description.substring(0, 60)}...
           </p>
         </div>
         {/* Bedroom & Washroom */}
