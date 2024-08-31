@@ -1,11 +1,13 @@
 import React from "react";
+import { FcGoogle } from "react-icons/fc";
+import { SiGithub } from "react-icons/si";
 import { Link } from "react-router-dom";
 
 const Registration = () => {
   return (
-    <div data-aos='fade-up' className="bg-white md:h-screen">
+    <div data-aos="fade-up" className="bg-white md:h-screen">
       <div className="grid md:grid-cols-2 items-center gap-8 h-full">
-        <div className="max-md:order-1 p-4 h-full">
+        <div className="max-md:order-1 p-2 h-full">
           <img
             src="https://readymadeui.com/signin-image.webp"
             className="lg:max-w-[90%] w-full h-full object-contain block mx-auto"
@@ -22,7 +24,9 @@ const Registration = () => {
             </div>
             {/* Form Tag Needed */}
             <div>
-              <label className="text-gray-800 text-xs block mb-2">Full Name</label>
+              <label className="text-gray-800 text-xs block mb-2">
+                Full Name
+              </label>
               <div className="relative flex items-center">
                 <input
                   name="name"
@@ -88,7 +92,9 @@ const Registration = () => {
               </div>
             </div>
             <div className="mt-6">
-              <label className="text-gray-800 text-xs block mb-2">Password</label>
+              <label className="text-gray-800 text-xs block mb-2">
+                Password
+              </label>
               <div className="relative flex items-center">
                 <input
                   name="password"
@@ -111,21 +117,39 @@ const Registration = () => {
                 </svg>
               </div>
             </div>
-            <div className="mt-12">
+            <div className="mt-8">
+              <p className="text-sm mb-6 text-gray-800">
+                Already have an account?{" "}
+                <Link
+                  to="/login"
+                  className="text-blue-500 font-semibold hover:underline ml-1"
+                >
+                  Login here
+                </Link>
+              </p>
               <button
                 type="button"
                 className="btn w-full py-3 px-6 text-sm tracking-wider font-semibold rounded-md bg-blue-600 hover:bg-blue-700 text-white focus:outline-none"
               >
                 Create an account
               </button>
-              <p className="text-sm mt-6 text-gray-800">
-                Already have an account?{" "}
-                <Link to='/login'
-                  className="text-blue-500 font-semibold hover:underline ml-1"
-                >
-                  Login here
-                </Link>
-              </p>
+              <div className="divider">
+                <p>OR</p>
+              </div>
+              <button
+                type="btn"
+                className="w-full px-6 py-3 flex items-center justify-center rounded-md text-gray-800 text-sm tracking-wider font-semibold border-none outline-none bg-gray-100 hover:bg-gray-200"
+              >
+                <FcGoogle className="text-xl" />
+                <p className="text-lg">Continue with Google</p>
+              </button>
+              <button
+                type="btn"
+                className="mt-3 w-full px-6 py-3 flex items-center justify-center gap-4 rounded-md text-gray-800 text-sm tracking-wider font-semibold border-none outline-none bg-gray-100 hover:bg-gray-200"
+              >
+                <SiGithub className="text-xl" />
+                <p className="text-lg">Continue with Github</p>
+              </button>
             </div>
           </form>
         </div>
