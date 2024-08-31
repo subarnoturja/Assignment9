@@ -20,7 +20,7 @@ const PropertyCard = ({ property }) => {
   } = property;
 
   return (
-    <div className="max-w-xl container border-2 p-4 mb-6 rounded-xl shadow-lg transform hover:scale-105">
+    <div className="max-w-xl container border-2 p-4 mb-10 rounded-xl shadow-lg transform hover:scale-105">
       <div className="flex justify-between pb-4 border-bottom">
         <div className="flex items-center">
           <a
