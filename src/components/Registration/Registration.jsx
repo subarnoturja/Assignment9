@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Registration = () => {
   return (
-    <div className="bg-white md:h-screen">
+    <div data-aos='fade-up' className="bg-white md:h-screen">
       <div className="grid md:grid-cols-2 items-center gap-8 h-full">
-        <div className="max-md:order-1 p-4 bg-gray-50 h-full">
+        <div className="max-md:order-1 p-4 h-full">
           <img
             src="https://readymadeui.com/signin-image.webp"
             className="lg:max-w-[90%] w-full h-full object-contain block mx-auto"
@@ -119,12 +120,11 @@ const Registration = () => {
               </button>
               <p className="text-sm mt-6 text-gray-800">
                 Already have an account?{" "}
-                <a
-                  href="javascript:void(0);"
+                <Link to='/login'
                   className="text-blue-500 font-semibold hover:underline ml-1"
                 >
                   Login here
-                </a>
+                </Link>
               </p>
             </div>
           </form>

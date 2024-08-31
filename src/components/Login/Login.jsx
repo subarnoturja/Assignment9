@@ -1,23 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <div>
+    <div data-aos='fade-up'>
       <div className="min-h-screen flex flex-col items-center justify-center">
         <div className="grid md:grid-cols-2 items-center gap-4 max-md:gap-8 max-w-6xl max-md:max-w-lg w-full p-4 m-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md">
           <div className="md:max-w-md w-full px-4 py-4">
             <form>
               <div className="mb-12">
                 <h3 className="text-gray-800 text-3xl font-extrabold">Sign in</h3>
-                <p className="text-sm mt-4 text-gray-800">
-                  Don't have an account{" "}
-                  <a
-                    href="javascript:void(0);"
-                    className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap"
-                  >
-                    Register here
-                  </a>
-                </p>
+                
               </div>
 
               <div>
@@ -89,32 +82,14 @@ const Login = () => {
                   </svg>
                 </div>
               </div>
-
-              <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
-                <div className="flex items-center">
-                  <input
-                    id="remember-me"
-                    name="remember-me"
-                    type="checkbox"
-                    className="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                  />
-                  <label
-                    for="remember-me"
-                    className="ml-3 block text-sm text-gray-800"
+              <p className="text-sm mt-4 text-gray-800">
+                  Don't have an account{" "}
+                  <Link to='/registration'
+                    className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap"
                   >
-                    Remember me
-                  </label>
-                </div>
-                <div>
-                  <a
-                    href="jajvascript:void(0);"
-                    className="text-blue-600 font-semibold text-sm hover:underline"
-                  >
-                    Forgot Password?
-                  </a>
-                </div>
-              </div>
-
+                    Register here
+                  </Link>
+                </p>
               <div className="mt-12">
                 <button
                   type="button"
