@@ -1,25 +1,44 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
-import Banner1 from '../../assets/Banner1.jpg'
-import Banner2 from '../../assets/Banner2.jpg'
-import Banner3 from '../../assets/Banner3.jpg'
-import Banner4 from '../../assets/Banner4.jpg'
-
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
+import Banner1 from "../../assets/Banner1.jpg";
+import Banner2 from "../../assets/Banner2.jpg";
+import Banner3 from "../../assets/Banner3.jpg";
+import Banner4 from "../../assets/Banner4.jpg";
+import Hero from "./Hero";
 
 const Banner = () => {
-    return (
-        <div className='mb-6'>
-            <Swiper pagination={true} modules={[Pagination]} className="mySwiper h-[520px] rounded-xl">
-        <SwiperSlide><img src={Banner1} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={Banner2} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={Banner3} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={Banner4} alt="" /></SwiperSlide>
-      </Swiper>
+  return (
+    <div className="mb-6">
+        <div>
+            <Swiper
+            pagination={true}
+            modules={[Pagination]}
+            className="mySwiper h-[520px] rounded-xl">
+            <SwiperSlide>
+                <Hero 
+                image={Banner1} 
+                text='Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+        quasi. In deleniti eaque aut repudiandae et a id nisi.'></Hero>
+            </SwiperSlide>
+            <SwiperSlide>
+                <Hero image={Banner2} text='Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+        quasi. In deleniti eaque aut repudiandae et a id nisi.'></Hero>
+            </SwiperSlide>
+            <SwiperSlide>
+                <Hero image={Banner3} text='Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+        quasi. In deleniti eaque aut repudiandae et a id nisi.'></Hero>
+            </SwiperSlide>
+            <SwiperSlide>
+                <Hero image={Banner4} text='Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+        quasi. In deleniti eaque aut repudiandae et a id nisi.'></Hero>
+            </SwiperSlide>
+            </Swiper>
         </div>
-    );
+    </div>
+  );
 };
 
 export default Banner;
