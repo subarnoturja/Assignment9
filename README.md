@@ -1,8 +1,20 @@
-# React + Vite
+# QuickRent
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Live Link
+- [QuickRent]()
 
-Currently, two official plugins are available:
+This is a residential rental website. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Important links are given below
+
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Daisy UI](https://daisyui.com/)
+- [Mamba UI](https://mambaui.com/)
+- [ReadymadeUI](https://readymadeui.com/)
+- [ReactIcons](https://react-icons.github.io/react-icons/)
+- [React-Router](https://reactrouter.com/en/main/start/tutorial)
+- [React-Swiper](https://swiperjs.com/)
+- [AOS Animation](https://michalsnik.github.io/aos/)
+- [React-Hook-From](https://react-hook-form.com/)
+- [Firebase](https://firebase.google.com/)
+- [React-Toastify](https://www.npmjs.com/package/react-toastify)

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { FcGoogle } from "react-icons/fc";
 import { SiGithub } from "react-icons/si";
 import { Link } from "react-router-dom";
@@ -6,6 +7,9 @@ import { Link } from "react-router-dom";
 const Registration = () => {
   return (
     <div data-aos="fade-up" className="bg-white md:h-screen">
+      <Helmet>
+        <title>QuickRent | Registration</title>
+      </Helmet>
       <div className="grid md:grid-cols-2 items-center gap-8 h-full">
         <div className="max-md:order-1 p-2 h-full">
           <img
