@@ -2,6 +2,7 @@ import React from "react";
 import { FaBangladeshiTakaSign, FaBath, FaBed } from "react-icons/fa6";
 import { PiBuildingApartmentLight } from "react-icons/pi";
 import { SlLocationPin } from "react-icons/sl";
+import { Link } from "react-router-dom";
 
 const PropertyCard = ({ property }) => {
   const {
@@ -99,9 +100,12 @@ const PropertyCard = ({ property }) => {
           {area} sq ft
           </div>
         </div>
-        <button className="btn btn-success text-white w-full">
-          View Property
-        </button>
+        <Link 
+        to={`/details/${id}`}>
+          <button className="btn btn-success text-white w-full mt-5">
+            View Property
+          </button>
+        </Link>
       </div>
     </div>
   );

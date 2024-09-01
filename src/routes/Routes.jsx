@@ -5,6 +5,8 @@ import MainLayout from "../MainLayout/MainLayout";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Login from "../components/Login/Login";
 import Registration from "../components/Registration/Registration";
+import PropertyDetails from "../components/PropertyDetails/PropertyDetails";
+import PrivateRoutes from "./PrivateRoutes";
 
 
 export const router = createBrowserRouter([
@@ -14,17 +16,22 @@ export const router = createBrowserRouter([
         errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
-                path: '/',
+                index: true,
                 element: <Home></Home>,
                 loader: () => fetch('/Properties.json')
             },
             {
+                path: '/details/:id',
+                element: <PrivateRoutes><PropertyDetails></PropertyDetails></PrivateRoutes>,
+                loader: () => fetch('/Properties.json')
+            },
+            {
                 path: '/login',
-                element: <Login></Login>,
+                element: <Login />
             },
             {
                 path: '/registration',
-                element: <Registration></Registration>,
+                element: <Registration />
             }
         ]
     }
