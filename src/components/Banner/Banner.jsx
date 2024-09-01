@@ -20,16 +20,13 @@ const Banner = () => {
             <SwiperSlide>
                 <Hero 
                 image={Banner1} 
-                text='Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.'></Hero>
+                text='Discover modern living spaces designed for your lifestyle. Experience the perfect blend of comfort, community, and convenience.'></Hero>
             </SwiperSlide>
             <SwiperSlide>
-                <Hero image={Banner2} text='Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.'></Hero>
+                <Hero image={Banner2} text='Discover modern living spaces designed for your lifestyle. Experience the perfect blend of comfort, community, and convenience.'></Hero>
             </SwiperSlide>
             <SwiperSlide>
-                <Hero image={Banner3} text='Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.'></Hero>
+                <Hero image={Banner3} text='Discover modern living spaces designed for your lifestyle. Experience the perfect blend of comfort, community, and convenience.'></Hero>
             </SwiperSlide>
             <SwiperSlide>
                 <Hero image={Banner4} text='Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem

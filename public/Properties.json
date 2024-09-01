@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "apartment_img": "https://example.com/apartment1.jpg",
+    "apartment_img": "https://i.postimg.cc/d1rqxLZ3/The-Commodore-Richmond-VA-David-Keith-Photography-169-HDR-Edit-640x427.jpg",
     "estate_title": "Modern Luxury Apartment",
     "segment_name": "Premium",
     "description": "A spacious and luxurious apartment with stunning city views.",
@@ -15,7 +15,7 @@
   },
   {
     "id": 2,
-    "apartment_img": "https://example.com/apartment2.jpg",
+    "apartment_img": "https://i.postimg.cc/RVR0m6sn/DSC5897-640x427.jpg",
     "estate_title": "Cozy Family Apartment",
     "segment_name": "Mid-Range",
     "description": "A comfortable and affordable apartment perfect for families.",
@@ -29,7 +29,7 @@
   },
   {
     "id": 3,
-    "apartment_img": "https://example.com/apartment3.jpg",
+    "apartment_img": "https://i.postimg.cc/0NrjckCK/Vault-Interiors-Winter-11-640x427.jpg",
     "estate_title": "Studio Apartment",
     "segment_name": "Budget",
     "description": "A small but functional studio apartment with a balcony.",
@@ -43,7 +43,7 @@
   },
   {
     "id": 4,
-    "apartment_img": "https://example.com/apartment4.jpg",
+    "apartment_img": "https://i.postimg.cc/VN9nPLCG/1-Infinity-Pool-2-640x427.jpg",
     "estate_title": "Penthouse with Rooftop Pool",
     "segment_name": "Luxury",
     "description": "A luxurious penthouse with a private rooftop pool and stunning views.",

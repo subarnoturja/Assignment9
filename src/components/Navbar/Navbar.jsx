@@ -1,27 +1,28 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import logo from '../../assets/logo.png'
 
 const Navbar = () => {
-    const navLinks = (
+  const navLinks = (
     <>
-        <li>
-            <Link to='/'>Home</Link>
-        </li>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
     </>
-    )
+  );
 
-    const { user, userLogout } = useContext(AuthContext);
+  const { user, userLogout } = useContext(AuthContext);
 
-    const handleSignOut = () =>{
-      userLogout()
-      .then(result => {
+  const handleSignOut = () => {
+    userLogout()
+      .then((result) => {
         console.log(result.user);
       })
-      .catch(error => {
-        console.log(error.message)
-      })
-    }
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
 
   return (
     <div className="navbar mb-4">
@@ -50,32 +51,34 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <Link className="btn btn-ghost text-xl">QuickRent</Link>
+          <Link className="btn btn-ghost text-xl"><img className="h-10" src={logo} alt="" />QuickRent</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {navLinks}
-        </ul>
+        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        { 
-          user? (
-            <div className="flex gap-4">
+        {user ? (
+          <div className="flex gap-4">
             <div title={user?.displayName}>
-                <img 
-                   className='mt-1 w-10 rounded-full'
-                  referrerPolicy='no-referrer'
-                  alt='User Profile Photo'
-                  src={user?.photoURL}
-                />
-              </div>
-              <button className="btn btn-outline btn-accent"
-            onClick={handleSignOut}>Logout</button>
+              <img
+                className="mt-1 w-10 rounded-full"
+                referrerPolicy="no-referrer"
+                alt="User Profile Photo"
+                src={user?.photoURL}
+              />
             </div>
-          ) : (
-            <Link to='/login'><button className="btn btn-accent">Login</button></Link>
-          )
-        }
+            <button
+              className="btn btn-outline btn-accent"
+              onClick={handleSignOut}
+            >
+              Logout
+            </button>
+          </div>
+        ) : (
+          <Link to="/login">
+            <button className="btn btn-accent">Login</button>
+          </Link>
+        )}
       </div>
     </div>
   );

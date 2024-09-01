@@ -12,11 +12,11 @@ const About = () => {
             </div>
             <div className='flex flex-col justify-center items-start gap-8'>
                 <h1 data-aos='zoom-in' 
-                className='text-red-500'>Who We Are</h1>
+                className='text-red-500 text-xl'>Who We Are</h1>
                 <h1 data-aos='zoom-in' data-aos-delay="200"
-                className='text-black text-[40px] font-semibold leading-10'>Lorem ipsum dolor sit amet, consectetur.</h1>
+                className='text-black text-[40px] font-semibold leading-10'>Creating Homes with Heart and Style</h1>
                 <p data-aos='zoom-in' data-aos-delay="400"
-                className='text-xl text-gray-600'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime explicabo molestiae quam, magnam non corrupti delectus? Consequuntur modi cum maxime voluptate quae iure officia quam.</p>
+                className='text-xl text-gray-600'>We believe in designing more than just living spaces—we create homes where memories are made. Experience the difference with us, where every detail matters.</p>
             </div>
         </div>
     );

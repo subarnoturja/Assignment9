@@ -11,8 +11,8 @@ const Hero = ({ image, text }) => {
     >
       <div className="hero-overlay bg-opacity-70">
         <div className="hero-content text-neutral-content text-center">
-          <div className="max-w-lg mt-40">
-            <h1 className="mb-5 text-5xl font-bold text-white">Hello there</h1>
+          <div className="max-w-xl mt-40">
+            <h1 className="mb-5 text-5xl font-bold text-white">Home! Where Comfort Meets Convenience</h1>
             <p className="mb-5 text-lg text-white">{text}</p>
           </div>
         </div>
