@@ -14,12 +14,12 @@ const Registration = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm()
 
   const onSubmit = (data) => {
     const { fullName, email, photo, password } = data;
+    
     createUser(email, password)
     .then(result => {
       console.log(result.user);
