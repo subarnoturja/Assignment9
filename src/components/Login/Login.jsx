@@ -10,7 +10,7 @@ import { Bounce, toast } from "react-toastify";
 
 const Login = () => {
 
-  const { setUser, userLogin, googleLogin } = useContext(AuthContext);
+  const { setUser, userLogin, googleLogin, githubLogin } = useContext(AuthContext);
 
   const {
     register,
@@ -54,6 +54,13 @@ const Login = () => {
 
   const handleGoogleLogin = () => {
     googleLogin()
+    .then(result => {
+      setUser(result.user);
+    })
+  }
+
+  const handleGithubLogin = () => {
+    githubLogin()
     .then(result => {
       setUser(result.user);
     })
@@ -119,7 +126,7 @@ const Login = () => {
                 <button onClick={handleGoogleLogin} className="btn border-none outline-none">
                   <FcGoogle className="text-4xl"></FcGoogle>
                 </button>
-                <button className="btn border-none outline-none">
+                <button onClick={handleGithubLogin} className="btn border-none outline-none">
                   <SiGithub className="text-4xl"></SiGithub>
                 </button>
               </div>
