@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
     const navLinks = (
@@ -9,6 +10,19 @@ const Navbar = () => {
         </li>
     </>
     )
+
+    const { user, userLogout } = useContext(AuthContext);
+
+    const handleSignOut = () =>{
+      userLogout()
+      .then(result => {
+        console.log(result.user);
+      })
+      .catch(error => {
+        console.log(error.message)
+      })
+    }
+
   return (
     <div className="navbar mb-4">
       <div className="navbar-start">
@@ -44,7 +58,24 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link to='/login'><button className="btn btn-accent">Login</button></Link>
+        { 
+          user? (
+            <div className="flex gap-4">
+            <div title={user?.displayName}>
+                <img 
+                   className='mt-1 w-10 rounded-full'
+                  referrerPolicy='no-referrer'
+                  alt='User Profile Photo'
+                  src={user?.photoURL}
+                />
+              </div>
+              <button className="btn btn-outline btn-accent"
+            onClick={handleSignOut}>Logout</button>
+            </div>
+          ) : (
+            <Link to='/login'><button className="btn btn-accent">Login</button></Link>
+          )
+        }
       </div>
     </div>
   );

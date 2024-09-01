@@ -10,7 +10,7 @@ import { Bounce, toast } from "react-toastify";
 
 const Login = () => {
 
-  const { userLogin } = useContext(AuthContext);
+  const { setUser, userLogin, googleLogin } = useContext(AuthContext);
 
   const {
     register,
@@ -49,8 +49,14 @@ const Login = () => {
         theme: "light",
         transition: Bounce,
         });
+    }) 
+  }
+
+  const handleGoogleLogin = () => {
+    googleLogin()
+    .then(result => {
+      setUser(result.user);
     })
-    
   }
 
   return (
@@ -108,16 +114,15 @@ const Login = () => {
                   Sign in
                 </button>
               </div>
-
-              <div className="space-x-6 flex justify-center mt-6">
-                <button className="btn border-none outline-none">
+            </form>
+            <div className="space-x-6 flex justify-center mt-6">
+                <button onClick={handleGoogleLogin} className="btn border-none outline-none">
                   <FcGoogle className="text-4xl"></FcGoogle>
                 </button>
                 <button className="btn border-none outline-none">
                   <SiGithub className="text-4xl"></SiGithub>
                 </button>
               </div>
-            </form>
           </div>
 
           <div className="md:h-full bg-[#000842] rounded-xl lg:p-12 p-8">
